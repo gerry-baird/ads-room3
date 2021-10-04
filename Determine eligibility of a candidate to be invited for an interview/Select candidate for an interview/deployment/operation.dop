@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Select candidate for an interview">
+  <name>Select-candidate-for-an-interview</name>
+  <uuid>bb7b6b9e-3c18-4209-b598-8ac66ba39b1f</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#feb7b780-7198-483f-adc5-465c5112b16c"/>
+  <targetRuleProject href="../../Select%20candidate%20for%20an%20interview#058b2741-4af1-4ee0-b5e9-34246bf590b5"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
