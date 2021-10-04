@@ -1,0 +1,35 @@
+
+
+public class AcceptedRejected
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "AcceptedRejected"
+        property "de.generated" "true"
+{
+    domain {static accepted, static rejected}
+    public static final readonly AcceptedRejected accepted
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Accepted";
+    public static final readonly AcceptedRejected rejected
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Rejected";
+}
+
+public class SkillLevel
+        extends java.lang.Enum
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Skill level"
+        property "de.generated" "true"
+{
+    domain {static average, static bad, static good}
+    public static final readonly SkillLevel average
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Average";
+    public static final readonly SkillLevel bad
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Bad";
+    public static final readonly SkillLevel good
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Good";
+}
+

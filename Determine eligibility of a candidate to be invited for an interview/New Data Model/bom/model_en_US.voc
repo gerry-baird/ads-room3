@@ -1,0 +1,12 @@
+
+# AcceptedRejected
+AcceptedRejected#concept.label = AcceptedRejected
+AcceptedRejected.accepted#instance.label = Accepted
+AcceptedRejected.rejected#instance.label = Rejected
+
+# SkillLevel
+SkillLevel#concept.documentation = 
+SkillLevel#concept.label = Skill level
+SkillLevel.average#instance.label = Average
+SkillLevel.bad#instance.label = Bad
+SkillLevel.good#instance.label = Good
