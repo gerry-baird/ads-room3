@@ -17,19 +17,23 @@
                         <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
                     </Properties>
                     <ExpressionDefinition>
-                        <Text><![CDATA['Determine technical skill fit' is <a string>]]></Text>
+                        <Text><![CDATA['Determine technical skill fit' is <an AcceptedRejected> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
                 <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
                     <ExpressionDefinition>
-                        <Text><![CDATA['Determine personality fit' is <a string>]]></Text>
+                        <Text><![CDATA['Determine personality fit' is <an AcceptedRejected> ]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a string>]]></Text>
+                        <Text><![CDATA[set decision to <an AcceptedRejected> ]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -38,17 +42,17 @@
             <Partition DefId="C0">
                 <Condition>
                     <Expression>
-                        <Param><![CDATA["Rejected"]]></Param>
+                        <Param><![CDATA[Rejected]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA["Rejected"]]></Param>
+                                <Param><![CDATA[Rejected]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA["Rejected"]]></Param>
+                                        <Param><![CDATA[Rejected]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
@@ -57,17 +61,17 @@
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA["Rejected"]]></Param>
+                        <Param><![CDATA[Rejected]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA["Accepted"]]></Param>
+                                <Param><![CDATA[Accepted]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA["Rejected"]]></Param>
+                                        <Param><![CDATA[Rejected]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
@@ -76,17 +80,17 @@
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA["Accepted"]]></Param>
+                        <Param><![CDATA[Accepted]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA["Rejected"]]></Param>
+                                <Param><![CDATA[Rejected]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA["Rejected"]]></Param>
+                                        <Param><![CDATA[Rejected]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
@@ -95,17 +99,17 @@
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA["Accepted"]]></Param>
+                        <Param><![CDATA[Accepted]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA["Accepted"]]></Param>
+                                <Param><![CDATA[Accepted]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
-                                        <Param><![CDATA["Accepted"]]></Param>
+                                        <Param><![CDATA[Accepted]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
@@ -114,23 +118,11 @@
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet>
-                        <Action DefId="A0">
-                            <Expression>
-                                <Param/>
-                            </Expression>
-                        </Action>
-                    </ActionSet>
+                    <ActionSet/>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet>
-                        <Action DefId="A0">
-                            <Expression>
-                                <Param/>
-                            </Expression>
-                        </Action>
-                    </ActionSet>
+                    <ActionSet/>
                 </Condition>
                 <Condition>
                     <Expression/>
@@ -163,7 +155,10 @@
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Determine technical skill fit]]></Data>
             <Data Name="Definitions(C1)#HeaderText"><![CDATA[Determine personality fit]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a string]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a string]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Determine eligibility of a candidate to be invited for an interview]]></Data>
+            <Data Name="Definitions(C1)[0]#HeaderText"><![CDATA[a string]]></Data>
         </ResourceSet>
     </Resources>
 </DT></definition>

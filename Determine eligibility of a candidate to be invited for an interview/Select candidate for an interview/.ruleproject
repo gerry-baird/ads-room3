@@ -7,7 +7,9 @@
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
     <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
   </paths>
-  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM"/>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview:newDataModel#LATEST-SNAPSHOT" packageId="decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview:newDataModel" version="LATEST-SNAPSHOT"/>
+  </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
   </modelFolders>

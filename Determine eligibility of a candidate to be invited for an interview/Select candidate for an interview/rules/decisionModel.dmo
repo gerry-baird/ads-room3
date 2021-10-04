@@ -11,13 +11,13 @@
         <description>Determine whether candidate are suitable to be invited for an interview for our open BA medior position Digital Decisioning </description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.String" collection="false" name="Determine technical skill fit"/>
-                <input bomType="java.lang.String" collection="false" name="Determine personality fit"/>
-                <output bomType="java.lang.String" collection="false" name="Determine eligibility of a candidate to be invited for an interview"/>
+                <input bomType="AcceptedRejected" collection="false" name="Determine technical skill fit"/>
+                <input bomType="AcceptedRejected" collection="false" name="Determine personality fit"/>
+                <output bomType="AcceptedRejected" collection="false" name="Determine eligibility of a candidate to be invited for an interview"/>
                 <rule defaultRule="false" href="node_1/Overal%20fit.dmt" kind="DecisionTable" name="Overal fit"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Determine eligibility of a candidate to be invited for an interview" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Determine eligibility of a candidate to be invited for an interview" typeRef="AcceptedRejected"/>
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
@@ -29,45 +29,61 @@
         <description>Determine how well the candidate technically fits with the company</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.String" collection="false" name="Skill test results"/>
-                <output bomType="java.lang.String" collection="false" name="Determine technical skill fit"/>
+                <input bomType="SkillLevel" collection="false" name="Skill test results"/>
+                <input bomType="java.lang.String" collection="false" name="CV Profile"/>
+                <output bomType="AcceptedRejected" collection="false" name="Determine technical skill fit"/>
                 <rule defaultRule="false" href="node_2/Technical%20fit.dmt" kind="DecisionTable" name="Technical fit"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_2_ii" name="Determine technical skill fit" typeRef="java.lang.String"/>
+        <variable id="node_2_ii" name="Determine technical skill fit" typeRef="AcceptedRejected"/>
         <informationRequirement>
             <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
         </informationRequirement>
     </decision>
     <decision id="node_3" name="Determine personality fit">
         <description>Determine how well the candidate personally fits with the company</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.String" collection="false" name="Personality test results"/>
-                <output bomType="java.lang.String" collection="false" name="Determine personality fit"/>
+                <input bomType="SkillLevel" collection="false" name="Personality test results"/>
+                <input bomType="java.lang.String" collection="false" name="CV Profile"/>
+                <output bomType="AcceptedRejected" collection="false" name="Determine personality fit"/>
                 <rule defaultRule="false" href="node_3/Fit.dmt" kind="DecisionTable" name="Fit"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_3_ii" name="Determine personality fit" typeRef="java.lang.String"/>
+        <variable id="node_3_ii" name="Determine personality fit" typeRef="AcceptedRejected"/>
         <informationRequirement>
             <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
         </informationRequirement>
     </decision>
     <inputData id="node_4" name="Personality test results">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Personality test results"/>
+                <output bomType="SkillLevel" collection="false" name="Personality test results"/>
             </initialization>
         </extensionElements>
-        <variable id="node_4_ii" name="Personality test results" typeRef="java.lang.String"/>
+        <variable id="node_4_ii" name="Personality test results" typeRef="SkillLevel"/>
     </inputData>
     <inputData id="node_5" name="Skill test results">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Skill test results"/>
+                <output bomType="SkillLevel" collection="false" name="Skill test results"/>
             </initialization>
         </extensionElements>
-        <variable id="node_5_ii" name="Skill test results" typeRef="java.lang.String"/>
+        <variable id="node_5_ii" name="Skill test results" typeRef="SkillLevel"/>
+    </inputData>
+    <inputData id="node_6" name="CV Profile">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="CV Profile"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="CV Profile" typeRef="java.lang.String"/>
     </inputData>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

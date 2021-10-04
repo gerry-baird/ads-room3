@@ -29,4 +29,12 @@
         </plugins>
     </build>
 
+<dependencies>
+        <dependency>
+            <groupId>decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview</groupId>
+            <artifactId>newDataModel</artifactId>
+            <type>decision-library</type>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
