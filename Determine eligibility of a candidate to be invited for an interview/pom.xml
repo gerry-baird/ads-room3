@@ -18,6 +18,7 @@
         <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
     </properties>
     <modules>
+        <module>New Data Model</module>
         <module>Select candidate for an interview</module>
         <module>.decisionservice</module>
     </modules>

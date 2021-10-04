@@ -13,6 +13,11 @@
     <dependencies>
         <dependency>
             <groupId>decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview</groupId>
+            <artifactId>newDataModel</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview</groupId>
             <artifactId>selectCandidateForAnInterview</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
@@ -29,6 +34,7 @@
     </dependencies>
 
     
+
 
 <build>
         <resources>
@@ -54,6 +60,15 @@
                         </goals>
                         <configuration>
                             <artifactItems>
+                                <artifactItem>
+                                    <groupId>decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview</groupId>
+                                    <artifactId>newDataModel</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>decisions.room3.determine_eligibility_of_a_candidate_to_be_invited_for_an_interview</groupId>
                                     <artifactId>selectCandidateForAnInterview</artifactId>
