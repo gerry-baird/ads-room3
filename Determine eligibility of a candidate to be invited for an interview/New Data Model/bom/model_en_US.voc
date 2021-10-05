@@ -4,6 +4,11 @@ AcceptedRejected#concept.label = AcceptedRejected
 AcceptedRejected.accepted#instance.label = Accepted
 AcceptedRejected.rejected#instance.label = Rejected
 
+# CertificatePresence
+CertificatePresence#concept.label = Certificate presence
+CertificatePresence.certificatePresent#instance.label = Certificate present
+CertificatePresence.noCertificatePresent#instance.label = No certificate present
+
 # SkillLevel
 SkillLevel#concept.documentation = 
 SkillLevel#concept.label = Skill level

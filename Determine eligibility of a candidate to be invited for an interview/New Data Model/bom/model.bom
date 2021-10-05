@@ -15,6 +15,21 @@ public class AcceptedRejected
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Rejected";
 }
 
+public class CertificatePresence
+        extends java.lang.Enum
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Certificate presence"
+        property "de.generated" "true"
+{
+    domain {static certificatePresent, static noCertificatePresent}
+    public static final readonly CertificatePresence certificatePresent
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Certificate present";
+    public static final readonly CertificatePresence noCertificatePresent
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "No certificate present";
+}
+
 public class SkillLevel
         extends java.lang.Enum
         property "ads.typeId" "1"
