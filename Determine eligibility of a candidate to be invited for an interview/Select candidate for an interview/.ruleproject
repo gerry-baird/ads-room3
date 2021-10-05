@@ -31,5 +31,5 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <documentation><![CDATA[]]></documentation>
+  <documentation><![CDATA[Determine whether candidate are suitable to be invited for an interview for our open BA medior position Digital Decisioning ]]></documentation>
 </ilog.rules.studio.model.base:RuleProject>

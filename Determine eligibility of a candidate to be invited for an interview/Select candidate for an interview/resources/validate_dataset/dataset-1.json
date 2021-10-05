@@ -1,1 +1,5 @@
-{"personalityTestResults":"Bad","skillTestResults":"Good"}
+{
+  "personalityTestResults": "Bad",
+  "skillTestResults": "Good",
+  "CV": "No certificate present"
+}

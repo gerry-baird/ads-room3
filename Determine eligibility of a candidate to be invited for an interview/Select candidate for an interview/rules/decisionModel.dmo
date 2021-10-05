@@ -30,7 +30,7 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="SkillLevel" collection="false" name="Skill test results"/>
-                <input bomType="java.lang.String" collection="false" name="CV Profile"/>
+                <input bomType="CertificatePresence" collection="false" name="CV"/>
                 <output bomType="AcceptedRejected" collection="false" name="Determine technical skill fit"/>
                 <rule defaultRule="false" href="node_2/Technical%20fit.dmt" kind="DecisionTable" name="Technical fit"/>
             </ruleset>
@@ -48,7 +48,7 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="SkillLevel" collection="false" name="Personality test results"/>
-                <input bomType="java.lang.String" collection="false" name="CV Profile"/>
+                <input bomType="CertificatePresence" collection="false" name="CV"/>
                 <output bomType="AcceptedRejected" collection="false" name="Determine personality fit"/>
                 <rule defaultRule="false" href="node_3/Fit.dmt" kind="DecisionTable" name="Fit"/>
             </ruleset>
@@ -77,13 +77,13 @@
         </extensionElements>
         <variable id="node_5_ii" name="Skill test results" typeRef="SkillLevel"/>
     </inputData>
-    <inputData id="node_6" name="CV Profile">
+    <inputData id="node_6" name="CV">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="CV Profile"/>
+                <output bomType="CertificatePresence" collection="false" name="CV"/>
             </initialization>
         </extensionElements>
-        <variable id="node_6_ii" name="CV Profile" typeRef="java.lang.String"/>
+        <variable id="node_6_ii" name="CV" typeRef="CertificatePresence"/>
     </inputData>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
